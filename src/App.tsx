@@ -29,8 +29,12 @@ export default function App() {
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <div className="min-h-screen">
+      <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <div className="relative h-screen">
         {/* Video Background with Fallback Image */}
         <div
@@ -52,9 +56,7 @@ export default function App() {
         <div className="absolute inset-0 bg-black bg-opacity-50" />
 
         {/* Hero Content */}
-        <div className="relative z-10">
-          <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-          <MobileMenu isMenuOpen={isMenuOpen} />
+        <div className="relative z-10 pt-16 md:pt-0">
           <Hero />
         </div>
       </div>

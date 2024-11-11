@@ -26,7 +26,7 @@ export const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Welcome to Gamera
         </h1>
-        <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
+        <p className="mb-8 text-[16px] font-medium md:mt-[12px] md:leading-[28px] leading-[24px] text-white">
           The ultimate Web3 gaming platform with crypto payments and AI-driven personalization
         </p>
         <div className="flex gap-4 justify-center">
